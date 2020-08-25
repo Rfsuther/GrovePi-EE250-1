@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
 
 
-grovepi.pinMode(potentiometer,"INPUT")
+grovepi.pinMode(potPort,"INPUT")
 
 
 full_distance = 517
@@ -63,13 +63,24 @@ while True:
 
 
    	# (.....BUFFFER CLEAR)
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 ##########################################################################################################################################################
 # """ EE 250L Lab 02: GrovePi Sensors
