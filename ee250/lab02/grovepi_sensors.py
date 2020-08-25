@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
 
 
-grovepi.pinMode(potPort,"INPUT")
+grovepi.pinMode(potPrt,"INPUT")
 
 
 full_distance = 517
