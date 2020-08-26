@@ -25,7 +25,7 @@ import grovepi
 is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will 
 be true"""
 if __name__ == '__main__':
-    PORT = 4    # D4 is the port for ultrasonic  ranger
+    ultPrt = 4    # D4 is the port for ultrasonic  ranger
     potPrt = 0 #A0 is the potentiometer port
 
 
@@ -47,7 +47,7 @@ while True:
 
 
     print("Pot val =  ", potIN)
-    print("Ultra val = " , grovepi.ultrasonicRead(ultrasonic_ranger))
+    print("Ultra val = " , grovepi.ultrasonicRead(ultPrt)
     # if oldThresh != newThresh
 
 
