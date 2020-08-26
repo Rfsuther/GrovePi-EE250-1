@@ -50,14 +50,7 @@ while True:
 	#ultIN = grovepi.ultrasonicRead(PORT)
 	potIN = grovepi.analogRead(potPrt)
 	distIN = grovepi.ultrasonicRead(ultPrt)
-
-	print("Pot val =  ", potIN)
-	print("Ultra val = " , distIN )
 	
-	
-
-
-
 
 	# if count < 10:
 	# 	setText(f"Hello world\nLCD test {count}")
@@ -83,19 +76,19 @@ while True:
 # if oldThresh != newThresh set the buffer clear
 
 
-	dist2obj = distIN
+	dist2obj = int(distIN)
 
 	newThresh = int(517*(potIN/1023))
 
 
 	if dist2obj < newThresh:                   #   object
-		setRGB(255,10,20) #Sets red (R,G,B)
-		setText_norefresh(f"{newThresh}cm OBJ PRES   \n {dist2obj}cm")
+		setRGB(255,10,10) #Sets red (R,G,B)
+		setText_norefresh(f"{newThresh}cm OBJ PRES   \n{dist2obj}cm")
 
 
 
 	else:                           # no object
-		setRGB(10,255,30) #SET TO GREEN
+		setRGB(10,255,10) #SET TO GREEN
 
-		setText_norefresh(f"{newThresh}cm            \n{ dist2obj}cm")
+		setText_norefresh(f"{newThresh}cm            \n{dist2obj}cm")
 
