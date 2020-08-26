@@ -89,17 +89,17 @@ while True:
 
 
 	setText_norefresh(f"\n {dist2obj}cm")
-    
-    if dist2obj < newThresh                   #   object
-    	setRGB(255,10,20) #Sets red (R,G,B)
-    	setText_norefresh("1234{newThresh}")
+
+	if dist2obj < newThresh                   #   object
+		setRGB(255,10,20) #Sets red (R,G,B)
+		setText_norefresh("1234{newThresh}")
 
 
 
-    else...:                           # no object
-    	setRGB(10,255,30) #SET TO GREEN
+	else...:                           # no object
+		setRGB(10,255,30) #SET TO GREEN
 
-    	setText_norefresh(f"23456{newThresh}")
+		setText_norefresh(f"23456{newThresh}")
 
 
-   	(.....BUFFFER CLEAR)
+		(.....BUFFFER CLEAR)
