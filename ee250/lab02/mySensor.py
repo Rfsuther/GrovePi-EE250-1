@@ -59,14 +59,14 @@ while True:
 
 
 	if count < 100:
-		setText("Hello world\nLCD test ", str(1))
+		setText(f"Hello world\nLCD test {1}")
 		setRGB(0,128,64)
 		count += 1
 		time.sleep(0.01)
 
 	elif 100<count and count <200:
 
-		setText("Goodbyeeee\nLCD test ", str(1))
+		setText("Goodbyeeee\nLCD test {1}")
 		setRGB(128,0,64)
 		count += 1
 	else:
