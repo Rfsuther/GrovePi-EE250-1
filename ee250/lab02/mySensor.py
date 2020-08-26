@@ -64,7 +64,7 @@ while True:
 		count += 1
 		time.sleep(0.1)
 
-	else if 100<count and count <200:
+	elif 100<count and count <200:
 
 		setText("Goodbyeeee\nLCD test")
 		setRGB(128,0,64)
