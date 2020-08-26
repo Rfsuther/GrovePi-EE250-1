@@ -47,7 +47,7 @@ while True:
 
 
     print("Pot val =  ", potIN)
-    print("Ultra val = " , grovepi.ultrasonicRead(ultPrt)
+    print("Ultra val = " , grovepi.ultrasonicRead(ultPrt))
     # if oldThresh != newThresh
 
 
