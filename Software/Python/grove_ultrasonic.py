@@ -1,50 +1,66 @@
-#!/usr/bin/env python
-#
-# GrovePi Example for using the Grove Ultrasonic Ranger (http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger)
-#
-# The GrovePi connects the Raspberry Pi and Grove sensors.  You can learn more about GrovePi here:  http://www.dexterindustries.com/GrovePi
-#
-# Have a question about this example?  Ask on the forums here:  http://forum.dexterindustries.com/c/grovepi
-#
-'''
-## License
+""" EE 250L Lab 02: GrovePi Sensors
+List team members here.
+Insert Github repository link here.
+"""
 
-The MIT License (MIT)
-
-GrovePi for the Raspberry Pi: an open source platform for connecting Grove Sensors to the Raspberry Pi.
-Copyright (C) 2017  Dexter Industries
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-'''
+"""python3 interpreters in Ubuntu (and other linux distros) will look in a 
+default set of directories for modules when a program tries to `import` one. 
+Examples of some default directories are (but not limited to):
+  /usr/lib/python3.5
+  /usr/local/lib/python3.5/dist-packages
+The `sys` module, however, is a builtin that is written in and compiled in C for
+performance. Because of this, you will not find this in the default directories.
+"""
+import sys
+import time
+# By appending the folder of all the GrovePi libraries to the system path here,
+# we are successfully `import grovepi`
+sys.path.append('../../Software/Python/')
+# This append is to support importing the LCD library.
+sys.path.append('../../Software/Python/grove_rgb_lcd')
 
 import grovepi
 
-# Connect the Grove Ultrasonic Ranger to digital port D4
-# SIG,NC,VCC,GND
-ultrasonic_ranger = 4
+"""This if-statement checks if you are running this python file directly. That 
+is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will 
+be true"""
+if __name__ == '__main__':
+    ultPrt = 4    # D4 is the port for ultrasonic  ranger
+    potPrt = 0 #A0 is the potentiometer port
 
+
+
+grovepi.pinMode(potPrt,"INPUT")
+
+
+full_distance = 517
+
+
+##MAIN
 while True:
-    try:
-        # Read distance value from Ultrasonic
-        print(grovepi.ultrasonicRead(ultrasonic_ranger))
+    #So we do not poll the sensors too quickly which may introduce noise,
+    #sleep for a reasonable time of 200ms between each iteration.
+    time.sleep(0.2)
 
-    except TypeError:
-        print ("Error")
-    except IOError:
-        print ("Error")
+    #ultIN = grovepi.ultrasonicRead(PORT)
+    potIN = grovepi.analogRead(potPrt)
+
+
+    print("Pot val =  ", potIN)
+    print("Ultra val = " , grovepi.ultrasonicRead(ultPrt)
+    # if oldThresh != newThresh
+
+
+    # if ...:                            #   object
+    # 	setRGB(255,10,20) #Sets red (R,G,B)
+    # 	setText_norefresh("Set text here A {}...".format(str(X)) )
+
+
+
+    # else...:                           # no object
+    # 	setRGB(10,255,30) #SET TO GREEN
+
+    # 	setText_norefresh("Set text here B {}...".format(str(Y)) )
+
+
+   	# (.....BUFFFER CLEAR)
