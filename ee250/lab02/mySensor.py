@@ -83,12 +83,12 @@ while True:
 # if oldThresh != newThresh set the buffer clear
 
 
-dist2obj = distIN
+	dist2obj = distIN
 
-newThresh = int(517*(potIN/1023))
+	newThresh = int(517*(potIN/1023))
 
 
-setText_norefresh(f"\n {dist2obj}cm")
+	setText_norefresh(f"\n {dist2obj}cm")
     
     if dist2obj < newThresh                   #   object
     	setRGB(255,10,20) #Sets red (R,G,B)
