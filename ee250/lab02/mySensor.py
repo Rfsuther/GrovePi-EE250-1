@@ -49,10 +49,10 @@ while True:
 
 	#ultIN = grovepi.ultrasonicRead(PORT)
 	potIN = grovepi.analogRead(potPrt)
-
+	distIN = grovepi.ultrasonicRead(ultPrt)
 
 	print("Pot val =  ", potIN)
-	print("Ultra val = " , grovepi.ultrasonicRead(ultPrt))
+	print("Ultra val = " , distIN )
 	
 	
 
@@ -83,9 +83,9 @@ while True:
 # if oldThresh != newThresh set the buffer clear
 
 
-dist2obj = ???
+dist2obj = distIN
 
-newThresh = ???
+newThresh = int(517*(potIN/1023))
 
 
 setText_norefresh(f"\n {dist2obj}cm")
