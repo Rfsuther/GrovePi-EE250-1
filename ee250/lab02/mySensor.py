@@ -90,7 +90,7 @@ while True:
 
 	if dist2obj < newThresh:                   #   object
 		setRGB(255,10,20) #Sets red (R,G,B)
-		setText_norefresh(f"{newThresh}cm objectDetected \ n{dist2obj}cm")
+		setText_norefresh(f"{newThresh}cm OBJ PRES \ n{dist2obj}cm")
 
 
 
