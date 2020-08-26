@@ -83,12 +83,12 @@ while True:
 
 	if dist2obj < newThresh:                   #   object
 		setRGB(255,10,10) #Sets red (R,G,B)
-		setText_norefresh(f"{newThresh}cm OBJ PRES\n{dist2obj}cm")
+		setText_norefresh(f"{newThresh}cm OBJ PRES \n{dist2obj}cm")
 
 
 
 	else:                           # no object
 		setRGB(10,255,10) #SET TO GREEN
 
-		setText_norefresh(f"{newThresh}cm         \n{dist2obj}cm")
+		setText_norefresh(f"{newThresh}cm          \n{dist2obj}cm")
 
