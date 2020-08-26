@@ -88,16 +88,14 @@ while True:
 	newThresh = int(517*(potIN/1023))
 
 
-	setText_norefresh(f"\n {dist2obj}cm")
-
 	if dist2obj < newThresh:                   #   object
 		setRGB(255,10,20) #Sets red (R,G,B)
-		setText_norefresh("1234{newThresh}")
+		setText_norefresh(f"{newThresh}cm objectDetected \ n{dist2obj}cm"")
 
 
 
 	else:                           # no object
 		setRGB(10,255,30) #SET TO GREEN
 
-		setText_norefresh(f"23456{newThresh}")
+		setText_norefresh(f"{newThresh}cm \n{dist2obj}cm"")
 
