@@ -64,13 +64,13 @@ while True:
 		count += 1
 		time.sleep(0.01)
 
-	elif 10<count and count <20:
+	elif 10<count and count<20:
 
 		setText(f"Goodbyeeee\nLCD test {count}")
 		setRGB(128,0,64)
 		count += 1
 	else:
-		count=0
+		count=100
 		time.sleep(0.01)
 
 
