@@ -69,6 +69,57 @@ while True:
 		setRGB(128,0,64)
 		count += 1
 	else:
+		count=0
+		time.sleep(0.01)
+		setText(f"error")
+		count += 1
+
+
+
+
+#cd /home/pi/GrovePi-EE250-1/ee250/lab02
+
+
+
+
+    # if ...:                            #   object
+    # 	setRGB(255,10,20) #Sets red (R,G,B)
+    # 	setText_norefresh("Set text here A {}...".format(str(X)) )
+
+
+
+    # else...:                           # no object
+    # 	setRGB(10,255,30) #SET TO GREEN
+
+    # 	setText_norefresh("Set text here B {}...".format(str(Y)) )
+
+
+   	# (.....BUFFFER CLEAR)
+	#sleep for a reasonable time of 200ms between each iteration.
+	time.sleep(0.2)
+
+	#ultIN = grovepi.ultrasonicRead(PORT)
+	potIN = grovepi.analogRead(potPrt)
+
+
+	print("Pot val =  ", potIN)
+	print("Ultra val = " , grovepi.ultrasonicRead(ultPrt))
+	# if oldThresh != newThresh
+
+
+
+
+	if count < 10:
+		setText(f"Hello world\nLCD test {count}")
+		setRGB(0,128,64)
+		count += 1
+		time.sleep(0.01)
+
+	elif (10 <= count and count <= 20) :
+		setText(f"Goodbyeeee\nLCD test {count}")
+		setRGB(128,0,64)
+		count += 1
+	else:
 		count=100
 		time.sleep(0.01)
 		setText(f"error")
