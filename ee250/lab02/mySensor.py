@@ -42,24 +42,23 @@ full_distance = 517
 count = 0
 
 ##MAIN
-while True:
-    #So we do not poll the sensors too quickly which may introduce noise,
-    #sleep for a reasonable time of 200ms between each iteration.
-    time.sleep(0.2)
+	while True:
+	#So we do not poll the sensors too quickly which may introduce noise,
+	#sleep for a reasonable time of 200ms between each iteration.
+	time.sleep(0.2)
 
-    #ultIN = grovepi.ultrasonicRead(PORT)
-    potIN = grovepi.analogRead(potPrt)
+	#ultIN = grovepi.ultrasonicRead(PORT)
+	potIN = grovepi.analogRead(potPrt)
 
 
-    print("Pot val =  ", potIN)
-    print("Ultra val = " , grovepi.ultrasonicRead(ultPrt))
-    # if oldThresh != newThresh
+	print("Pot val =  ", potIN)
+	print("Ultra val = " , grovepi.ultrasonicRead(ultPrt))
+	# if oldThresh != newThresh
 
 
 
 
 	if count < 100:
-
 		setText("Hello world\nLCD test")
 		setRGB(0,128,64)
 		count += 1
