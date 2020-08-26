@@ -46,7 +46,8 @@ while True:
     potIN = grovepi.analogRead(potPrt)
 
 
-    print(potIN)
+    print("Pot val =  ", potIN)
+    print("Ultra val = "grovepi.ultrasonicRead(ultrasonic_ranger))
     # if oldThresh != newThresh
 
 
@@ -63,5 +64,3 @@ while True:
 
 
    	# (.....BUFFFER CLEAR)
-    
-    
