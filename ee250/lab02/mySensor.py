@@ -96,7 +96,7 @@ while True:
 
 
 
-	else...:                           # no object
+	else:                           # no object
 		setRGB(10,255,30) #SET TO GREEN
 
 		setText_norefresh(f"23456{newThresh}")
